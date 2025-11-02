@@ -125,6 +125,127 @@ body {
     gap: var(--spacing-sm);
 }
 
+/* ===== SOON BADGE ===== */
+.soon-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--color-accent), #f97316);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.soon-icon {
+    font-size: 1rem;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.soon-text {
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(220, 38, 38, 0.6);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* ===== DEVELOPMENT NOTICE BANNER ===== */
+.dev-notice {
+    position: fixed;
+    top: 80px;
+    right: 2rem;
+    max-width: 400px;
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: slideInRight 0.5s ease-out;
+    transition: all var(--transition-normal);
+}
+
+.dev-notice.hidden {
+    opacity: 0;
+    transform: translateX(450px);
+    pointer-events: none;
+}
+
+.dev-notice-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dev-notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.dev-notice-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dev-notice-text strong {
+    color: var(--color-accent);
+    font-size: 1rem;
+}
+
+.dev-notice-text span {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+.dev-notice-close {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.dev-notice-close:hover {
+    color: var(--color-accent);
+    transform: scale(1.2);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .btn-play {
     padding: 0.625rem 1.5rem;
     background: var(--color-accent);
@@ -244,6 +365,74 @@ body {
 
 .btn-large {
     padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+}
+
+/* ===== DISABLED BUTTON STATE ===== */
+.btn-disabled {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.7;
+    background: var(--color-bg-tertiary) !important;
+    color: var(--color-text-secondary) !important;
+    border: 2px dashed var(--color-border);
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.btn-disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-soon-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+/* ===== CTA SOCIALS ===== */
+.cta-socials {
+    margin-top: var(--spacing-md);
+}
+
+.cta-follow {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.social-link:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+}
+
+.social-link span:first-child {
     font-size: 1.25rem;
 }
 
@@ -597,12 +786,16 @@ body {
         gap: 0.5rem;
     }
     
-    .btn-play span {
-        display: none;
+    .soon-badge {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
     }
-    
-    .btn-play::after {
-        content: '🎮';
+
+    .dev-notice {
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+        top: 70px;
     }
 
     .team-grid {
@@ -611,5 +804,14 @@ body {
 
     .recruitment-card {
         padding: var(--spacing-md);
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-link {
+        width: 100%;
+        justify-content: center;
     }
 }
