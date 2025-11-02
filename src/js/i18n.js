@@ -7,7 +7,7 @@ const translations = {
             home: 'Головна',
             features: 'Особливості',
             gameplay: 'Геймплей',
-            updates: 'Оновлення'
+            team: 'Команда'
         },
         header: {
             play: 'Грати зараз'
@@ -63,6 +63,47 @@ const translations = {
             },
             placeholder: 'Ігровий процес'
         },
+        team: {
+            title: 'Наша команда',
+            subtitle: 'Професіонали, які створюють гру',
+            recruitment: {
+                title: 'Ми шукаємо таланти!',
+                text: 'Приєднуйся до нашої команди та допомагай створювати найкращу tower defense гру на Roblox! Ми шукаємо: програмістів, 3D-моделерів, дизайнерів, тестерів та маркетологів.',
+                button: '📧 Надіслати заявку'
+            },
+            members: {
+                member1: {
+                    name: 'Олександр',
+                    role: 'Lead Developer',
+                    description: 'Головний розробник гри. Відповідає за архітектуру та основний геймплей.'
+                },
+                member2: {
+                    name: 'Марія',
+                    role: 'Game Designer',
+                    description: 'Ігровий дизайнер. Створює баланс та унікальні механіки.'
+                },
+                member3: {
+                    name: 'Дмитро',
+                    role: '3D Artist',
+                    description: '3D художник. Моделює вежі, зомбі та всі ігрові об\'єкти.'
+                },
+                member4: {
+                    name: 'Анна',
+                    role: 'QA Tester',
+                    description: 'Тестувальниця. Знаходить баги та покращує якість гри.'
+                },
+                member5: {
+                    name: 'Ігор',
+                    role: 'Marketing Manager',
+                    description: 'Маркетолог. Просуває гру та залучає нових гравців.'
+                },
+                member6: {
+                    name: 'Софія',
+                    role: 'Community Manager',
+                    description: 'Менеджер спільноти. Спілкується з гравцями та збирає відгуки.'
+                }
+            }
+        },
         cta: {
             title: 'Готовий почати битву?',
             text: 'Приєднуйся до тисяч гравців та стань легендарним захисником!',
@@ -81,7 +122,7 @@ const translations = {
             home: 'Home',
             features: 'Features',
             gameplay: 'Gameplay',
-            updates: 'Updates'
+            team: 'Team'
         },
         header: {
             play: 'Play Now'
@@ -137,6 +178,47 @@ const translations = {
             },
             placeholder: 'Gameplay'
         },
+        team: {
+            title: 'Our Team',
+            subtitle: 'Professionals creating the game',
+            recruitment: {
+                title: 'We\'re Looking for Talent!',
+                text: 'Join our team and help create the best tower defense game on Roblox! We\'re looking for: programmers, 3D modelers, designers, testers, and marketers.',
+                button: '📧 Send Application'
+            },
+            members: {
+                member1: {
+                    name: 'Alexander',
+                    role: 'Lead Developer',
+                    description: 'Lead game developer. Responsible for architecture and core gameplay.'
+                },
+                member2: {
+                    name: 'Maria',
+                    role: 'Game Designer',
+                    description: 'Game designer. Creates balance and unique mechanics.'
+                },
+                member3: {
+                    name: 'Dmitry',
+                    role: '3D Artist',
+                    description: '3D artist. Models towers, zombies and all game objects.'
+                },
+                member4: {
+                    name: 'Anna',
+                    role: 'QA Tester',
+                    description: 'Tester. Finds bugs and improves game quality.'
+                },
+                member5: {
+                    name: 'Igor',
+                    role: 'Marketing Manager',
+                    description: 'Marketer. Promotes the game and attracts new players.'
+                },
+                member6: {
+                    name: 'Sophia',
+                    role: 'Community Manager',
+                    description: 'Community manager. Communicates with players and collects feedback.'
+                }
+            }
+        },
         cta: {
             title: 'Ready to Start the Battle?',
             text: 'Join thousands of players and become a legendary defender!',
@@ -155,7 +237,7 @@ const translations = {
             home: 'Главная',
             features: 'Особенности',
             gameplay: 'Геймплей',
-            updates: 'Обновления'
+            team: 'Команда'
         },
         header: {
             play: 'Играть сейчас'
@@ -211,6 +293,47 @@ const translations = {
             },
             placeholder: 'Игровой процесс'
         },
+        team: {
+            title: 'Наша команда',
+            subtitle: 'Профессионалы, создающие игру',
+            recruitment: {
+                title: 'Мы ищем таланты!',
+                text: 'Присоединяйся к нашей команде и помогай создавать лучшую tower defense игру на Roblox! Мы ищем: программистов, 3D-моделеров, дизайнеров, тестеров и маркетологов.',
+                button: '📧 Отправить заявку'
+            },
+            members: {
+                member1: {
+                    name: 'Александр',
+                    role: 'Lead Developer',
+                    description: 'Главный разработчик игры. Отвечает за архитектуру и основной геймплей.'
+                },
+                member2: {
+                    name: 'Мария',
+                    role: 'Game Designer',
+                    description: 'Игровой дизайнер. Создает баланс и уникальные механики.'
+                },
+                member3: {
+                    name: 'Дмитрий',
+                    role: '3D Artist',
+                    description: '3D художник. Моделирует башни, зомби и все игровые объекты.'
+                },
+                member4: {
+                    name: 'Анна',
+                    role: 'QA Tester',
+                    description: 'Тестировщица. Находит баги и улучшает качество игры.'
+                },
+                member5: {
+                    name: 'Игорь',
+                    role: 'Marketing Manager',
+                    description: 'Маркетолог. Продвигает игру и привлекает новых игроков.'
+                },
+                member6: {
+                    name: 'София',
+                    role: 'Community Manager',
+                    description: 'Менеджер сообщества. Общается с игроками и собирает отзывы.'
+                }
+            }
+        },
         cta: {
             title: 'Готов начать битву?',
             text: 'Присоединяйся к тысячам игроков и стань легендарным защитником!',
@@ -250,18 +373,15 @@ class I18n {
         const langDropdown = document.getElementById('langDropdown');
         const langOptions = document.querySelectorAll('.lang-option');
 
-        // Toggle dropdown
         langToggle?.addEventListener('click', (e) => {
             e.stopPropagation();
             langDropdown?.classList.toggle('active');
         });
 
-        // Close dropdown when clicking outside
         document.addEventListener('click', () => {
             langDropdown?.classList.remove('active');
         });
 
-        // Language selection
         langOptions.forEach(option => {
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -302,7 +422,6 @@ class I18n {
             }, 100);
         });
 
-        // Update HTML lang attribute
         document.documentElement.lang = lang;
     }
 
@@ -329,7 +448,6 @@ class I18n {
             currentLangText.textContent = lang.toUpperCase();
         }
 
-        // Update active state
         langOptions.forEach(option => {
             if (option.dataset.lang === lang) {
                 option.classList.add('active');
@@ -348,8 +466,5 @@ class I18n {
     }
 }
 
-// Initialize i18n system
 const i18n = new I18n();
-
-// Export for use in other modules
 window.i18n = i18n;
