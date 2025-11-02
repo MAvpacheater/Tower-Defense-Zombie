@@ -7,13 +7,19 @@
     "team": "Team"
   },
   "header": {
-    "play": "Play Now"
+    "play": "Play Now",
+    "soon": "Soon"
+  },
+  "notice": {
+    "title": "Game in Development!",
+    "text": "We are actively working on the game. Launch coming soon!"
   },
   "hero": {
     "title1": "TOWER DEFENSE",
     "title2": "Apocalypse",
     "description": "Defend your base from endless waves of zombies.<br>Build towers, upgrade defenses and become a legend!",
     "playBtn": "🎮 Start Game",
+    "soonLabel": "Coming Soon",
     "learnBtn": "Learn More",
     "stats": {
       "players": "Players",
@@ -104,8 +110,12 @@
   },
   "cta": {
     "title": "Ready to Start the Battle?",
-    "text": "Join thousands of players and become a legendary defender!",
-    "button": "🎮 Play Now on Roblox"
+    "text": "The game is actively being developed. Stay tuned for updates!",
+    "button": "🎮 Game in Development",
+    "soonLabel": "Launch Soon",
+    "follow": "Follow the news:",
+    "telegram": "Telegram",
+    "discord": "Discord"
   },
   "footer": {
     "copyright": "© 2025 Apocalypse Tower Defense. Roblox Game",
