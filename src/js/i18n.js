@@ -2,7 +2,7 @@
 
 const translations = {
     uk: {
-        logo: 'TOWER DEFENSE ZOMBIE',
+        logo: 'Apocalypse Tower Defense',
         nav: {
             home: 'Головна',
             features: 'Особливості',
@@ -14,7 +14,7 @@ const translations = {
         },
         hero: {
             title1: 'TOWER DEFENSE',
-            title2: 'ZOMBIE',
+            title2: 'Apocalypse',
             description: 'Захищай свою базу від нескінченних хвиль зомбі.<br>Будуй вежі, покращуй захист та стань легендою!',
             playBtn: '🎮 Почати гру',
             learnBtn: 'Дізнатись більше',
@@ -54,7 +54,7 @@ const translations = {
         },
         gameplay: {
             title: 'Захоплюючий геймплей',
-            description: 'Tower Defense Zombie - це стратегічна гра, де ти маєш захищати свою базу від нескінченних хвиль зомбі. Будуй вежі, покращуй їх та використовуй тактику для перемоги!',
+            description: 'Apocalypse Tower Defense - це стратегічна гра, де ти маєш захищати свою базу від нескінченних хвиль зомбі. Будуй вежі, покращуй їх та використовуй тактику для перемоги!',
             list: {
                 item1: '✓ Понад 50 унікальних рівнів',
                 item2: '✓ Різні режими складності',
@@ -69,14 +69,14 @@ const translations = {
             button: '🎮 Грати зараз на Roblox'
         },
         footer: {
-            copyright: '© 2025 Tower Defense Zombie. Roblox Game',
+            copyright: '© 2025 Apocalypse Tower Defense. Roblox Game',
             privacy: 'Політика конфіденційності',
             terms: 'Умови використання',
             support: 'Підтримка'
         }
     },
     en: {
-        logo: 'TOWER DEFENSE ZOMBIE',
+        logo: 'Apocalypse Tower Defense',
         nav: {
             home: 'Home',
             features: 'Features',
@@ -88,7 +88,7 @@ const translations = {
         },
         hero: {
             title1: 'TOWER DEFENSE',
-            title2: 'ZOMBIE',
+            title2: 'Apocalypse',
             description: 'Defend your base from endless waves of zombies.<br>Build towers, upgrade defenses and become a legend!',
             playBtn: '🎮 Start Game',
             learnBtn: 'Learn More',
@@ -128,7 +128,7 @@ const translations = {
         },
         gameplay: {
             title: 'Engaging Gameplay',
-            description: 'Tower Defense Zombie is a strategy game where you defend your base from endless waves of zombies. Build towers, upgrade them and use tactics to win!',
+            description: 'Apocalypse Tower Defense is a strategy game where you defend your base from endless waves of zombies. Build towers, upgrade them and use tactics to win!',
             list: {
                 item1: '✓ Over 50 unique levels',
                 item2: '✓ Different difficulty modes',
@@ -143,14 +143,14 @@ const translations = {
             button: '🎮 Play Now on Roblox'
         },
         footer: {
-            copyright: '© 2025 Tower Defense Zombie. Roblox Game',
+            copyright: '© 2025 Apocalypse Tower Defense. Roblox Game',
             privacy: 'Privacy Policy',
             terms: 'Terms of Use',
             support: 'Support'
         }
     },
     ru: {
-        logo: 'TOWER DEFENSE ZOMBIE',
+        logo: 'Apocalypse Tower Defense',
         nav: {
             home: 'Главная',
             features: 'Особенности',
@@ -162,7 +162,7 @@ const translations = {
         },
         hero: {
             title1: 'TOWER DEFENSE',
-            title2: 'ZOMBIE',
+            title2: 'Apocalypse',
             description: 'Защищай свою базу от бесконечных волн зомби.<br>Строй башни, улучшай защиту и стань легендой!',
             playBtn: '🎮 Начать игру',
             learnBtn: 'Узнать больше',
@@ -202,7 +202,7 @@ const translations = {
         },
         gameplay: {
             title: 'Захватывающий геймплей',
-            description: 'Tower Defense Zombie - это стратегическая игра, где ты должен защищать свою базу от бесконечных волн зомби. Строй башни, улучшай их и используй тактику для победы!',
+            description: 'Apocalypse Tower Defense - это стратегическая игра, где ты должен защищать свою базу от бесконечных волн зомби. Строй башни, улучшай их и используй тактику для победы!',
             list: {
                 item1: '✓ Более 50 уникальных уровней',
                 item2: '✓ Разные режимы сложности',
@@ -217,7 +217,7 @@ const translations = {
             button: '🎮 Играть сейчас на Roblox'
         },
         footer: {
-            copyright: '© 2025 Tower Defense Zombie. Roblox Game',
+            copyright: '© 2025 Apocalypse Tower Defense. Roblox Game',
             privacy: 'Политика конфиденциальности',
             terms: 'Условия использования',
             support: 'Поддержка'
