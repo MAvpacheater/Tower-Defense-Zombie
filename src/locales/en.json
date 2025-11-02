@@ -1,0 +1,116 @@
+{
+  "logo": "Apocalypse Tower Defense",
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "gameplay": "Gameplay",
+    "team": "Team"
+  },
+  "header": {
+    "play": "Play Now"
+  },
+  "hero": {
+    "title1": "TOWER DEFENSE",
+    "title2": "Apocalypse",
+    "description": "Defend your base from endless waves of zombies.<br>Build towers, upgrade defenses and become a legend!",
+    "playBtn": "🎮 Start Game",
+    "learnBtn": "Learn More",
+    "stats": {
+      "players": "Players",
+      "towers": "Towers",
+      "zombies": "Zombies"
+    }
+  },
+  "features": {
+    "title": "Game Features",
+    "subtitle": "Unique gameplay and endless possibilities",
+    "towers": {
+      "title": "Epic Towers",
+      "text": "Over 100 unique towers with different abilities and upgrades"
+    },
+    "zombies": {
+      "title": "Various Zombies",
+      "text": "50+ types of zombies with unique attacks and abilities"
+    },
+    "abilities": {
+      "title": "Powerful Abilities",
+      "text": "Use special skills to destroy enemies"
+    },
+    "coop": {
+      "title": "Co-op Mode",
+      "text": "Play with friends up to 4 players simultaneously"
+    },
+    "rankings": {
+      "title": "Rankings",
+      "text": "Compete for first place in the global leaderboard"
+    },
+    "missions": {
+      "title": "Missions",
+      "text": "Complete daily quests and earn rewards"
+    }
+  },
+  "gameplay": {
+    "title": "Engaging Gameplay",
+    "description": "Apocalypse Tower Defense is a strategy game where you defend your base from endless waves of zombies. Build towers, upgrade them and use tactics to win!",
+    "list": {
+      "item1": "✓ Over 50 unique levels",
+      "item2": "✓ Different difficulty modes",
+      "item3": "✓ Progression and upgrade system",
+      "item4": "✓ Regular content updates"
+    },
+    "placeholder": "Gameplay"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Professionals creating the game",
+    "contactBtn": "💬 Telegram",
+    "recruitment": {
+      "title": "We're Looking for Talent!",
+      "text": "Join our team and help create the best tower defense game on Roblox! We're looking for: programmers, 3D modelers, designers, testers, and marketers.",
+      "button": "📧 Send Application"
+    },
+    "members": {
+      "member1": {
+        "name": "Alexander",
+        "role": "Lead Developer",
+        "description": "Lead game developer. Responsible for architecture and core gameplay."
+      },
+      "member2": {
+        "name": "Maria",
+        "role": "Game Designer",
+        "description": "Game designer. Creates balance and unique mechanics."
+      },
+      "member3": {
+        "name": "Dmitry",
+        "role": "3D Artist",
+        "description": "3D artist. Models towers, zombies and all game objects."
+      },
+      "member4": {
+        "name": "Anna",
+        "role": "QA Tester",
+        "description": "Tester. Finds bugs and improves game quality."
+      },
+      "member5": {
+        "name": "Igor",
+        "role": "Marketing Manager",
+        "description": "Marketer. Promotes the game and attracts new players."
+      },
+      "member6": {
+        "name": "Sophia",
+        "role": "Community Manager",
+        "description": "Community manager. Communicates with players and collects feedback."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Start the Battle?",
+    "text": "Join thousands of players and become a legendary defender!",
+    "button": "🎮 Play Now on Roblox"
+  },
+  "footer": {
+    "copyright": "© 2025 Apocalypse Tower Defense. Roblox Game",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "support": "Support"
+  }
+}
