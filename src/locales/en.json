@@ -137,6 +137,18 @@
         "role": "Builder",
         "description": "Builds worlds and environments inside the game."
       }
+  },
+  "codes": {
+    "title": "Promo Codes",
+    "subtitle": "Activate codes and get rewards in the game!",
+    "info": {
+      "title": "How to use codes?",
+      "text": "Copy the code, enter the game and enter it in the settings menu. Codes are case sensitive!"
+    },
+    "copied": "Code copied!",
+    "expired": {
+      "title": "Expired Codes",
+      "subtitle": "These codes no longer work"
     }
   },
   "cta": {
@@ -153,18 +165,5 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "support": "Support"
-  },
-  },
-  "codes": {
-    "title": "Promo Codes",
-    "subtitle": "Activate codes and get rewards in the game!",
-    "info": {
-      "title": "How to use codes?",
-      "text": "Copy the code, enter the game and enter it in the settings menu. Codes are case sensitive!"
-    },
-    "copied": "Code copied!",
-    "expired": {
-      "title": "Expired Codes",
-      "subtitle": "These codes no longer work"
-    }
+  }
 }
