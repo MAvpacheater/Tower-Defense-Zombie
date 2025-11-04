@@ -119,6 +119,14 @@ body {
     width: 100%;
 }
 
+.nav-link.active {
+    color: var(--color-accent);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
 .header-controls {
     display: flex;
     align-items: center;
@@ -573,6 +581,48 @@ body {
     background: var(--color-bg-secondary);
 }
 
+.team-page {
+    min-height: calc(100vh - 200px);
+    padding: 120px 0 60px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-accent), #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .team-recruitment {
     margin-bottom: var(--spacing-lg);
 }
@@ -617,6 +667,10 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+}
+
+.team-preview {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .team-card {
@@ -699,6 +753,11 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 136, 204, 0.4);
     background: linear-gradient(135deg, #229ED9, #0088cc);
+}
+
+.team-show-all {
+    text-align: center;
+    margin-top: var(--spacing-lg);
 }
 
 /* ===== CTA SECTION ===== */
@@ -802,6 +861,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .team-preview {
+        grid-template-columns: 1fr;
+    }
+
     .recruitment-card {
         padding: var(--spacing-md);
     }
@@ -814,4 +877,70 @@ body {
         width: 100%;
         justify-content: center;
     }
+
+    .team-page {
+        padding: 100px 0 40px;
+    }
+
+    .page-header {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes zombiePulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.1); 
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+}
+
+/* ===== TOOLTIPS ===== */
+.disabled-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    pointer-events: none;
+    animation: fadeIn 0.2s ease;
 }
