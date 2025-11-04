@@ -1,66 +1,7 @@
 // src/js/codes.js - Codes Page Functionality
 
-// Active codes with their rewards
-const activeCodes = [
-    {
-        code: 'MrDep',
-        reward: '100 coins',
-        icon: '💰',
-        type: 'common'
-    },
-    {
-        code: 'Darth',
-        reward: '100 coins',
-        icon: '💰',
-        type: 'common'
-    },
-    {
-        code: 'Never',
-        reward: '150 coins',
-        icon: '💎',
-        type: 'rare'
-    },
-    {
-        code: 'Jask_wantse',
-        reward: '100 coins',
-        icon: '💰',
-        type: 'common'
-    },
-    {
-        code: 'AdminArbuz',
-        reward: '200 coins',
-        icon: '💎',
-        type: 'rare'
-    },
-    {
-        code: 'Zoag',
-        reward: '350 coins',
-        icon: '🏆',
-        type: 'epic'
-    },
-    {
-        code: 'T1Ran',
-        reward: '250 coins',
-        icon: '💎',
-        type: 'rare'
-    },
-    {
-        code: 'Ferdinand',
-        reward: '75 coins',
-        icon: '💰',
-        type: 'common'
-    },
-    {
-        code: 'RELEASE',
-        reward: 'Limited Axe Man',
-        icon: '🪓',
-        type: 'legendary'
-    }
-];
-
-// Expired codes (example)
-const expiredCodes = [
-];
+let activeCodes = [];
+let expiredCodes = [];
 
 // Type badges configuration
 const typeBadges = {
@@ -71,16 +12,39 @@ const typeBadges = {
 };
 
 // Initialize codes page
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadCodesFromJSON();
     renderActiveCodes();
     renderExpiredCodes();
     setupCopyButtons();
 });
 
+// Load codes from JSON file
+async function loadCodesFromJSON() {
+    try {
+        const response = await fetch('../res/codes.json');
+        if (!response.ok) {
+            throw new Error('Failed to load codes.json');
+        }
+        const data = await response.json();
+        activeCodes = data.activeCodes || [];
+        expiredCodes = data.expiredCodes || [];
+    } catch (error) {
+        console.error('Error loading codes:', error);
+        activeCodes = [];
+        expiredCodes = [];
+    }
+}
+
 // Render active codes
 function renderActiveCodes() {
     const codesGrid = document.getElementById('codesGrid');
     if (!codesGrid) return;
+
+    if (activeCodes.length === 0) {
+        codesGrid.innerHTML = '<p style="text-align: center; color: var(--color-text-secondary); grid-column: 1 / -1;">No active codes available</p>';
+        return;
+    }
 
     codesGrid.innerHTML = activeCodes.map(codeData => {
         const isSpecial = codeData.type === 'legendary' || codeData.type === 'epic';
@@ -196,7 +160,7 @@ function showToast() {
 }
 
 // Update codes dynamically (for future API integration)
-function updateCodes(newCodes) {
+async function updateCodes(newCodes) {
     activeCodes.length = 0;
     activeCodes.push(...newCodes);
     renderActiveCodes();
@@ -220,7 +184,8 @@ window.codesManager = {
     updateCodes,
     searchCodes,
     activeCodes,
-    expiredCodes
+    expiredCodes,
+    loadCodesFromJSON
 };
 
 // Log initialization
