@@ -25,9 +25,9 @@
                     <a href="src/res/codes.html" class="nav-link" data-i18n="nav.codes">Codes</a>
                 </nav>
                 <div class="header-controls">
-                    <div class="soon-badge">
-                        <span class="soon-icon">🚀</span>
-                        <span class="soon-text" data-i18n="header.soon">Soon</span>
+                    <div class="demo-badge">
+                        <span class="demo-icon">🎮</span>
+                        <span class="demo-text" data-i18n="header.demo">Demo</span>
                     </div>
                     <div class="theme-switcher">
                         <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
@@ -64,8 +64,8 @@
         <div class="dev-notice-content">
             <span class="dev-notice-icon">⚠️</span>
             <div class="dev-notice-text">
-                <strong data-i18n="notice.title">Game in Development!</strong>
-                <span data-i18n="notice.text">We are actively working on the game. Launch coming soon!</span>
+                <strong data-i18n="notice.title">Demo Version Available!</strong>
+                <span data-i18n="notice.text">Try the demo version of the game now!</span>
             </div>
             <button class="dev-notice-close" id="closeNotice" aria-label="Close">✕</button>
         </div>
@@ -85,10 +85,10 @@
                         Build towers, upgrade defenses and become a legend!
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary btn-disabled" disabled>
-                            <span data-i18n="hero.playBtn">🎮 Start Game</span>
-                            <span class="btn-soon-label" data-i18n="hero.soonLabel">Coming Soon</span>
-                        </button>
+                        <a href="https://www.roblox.com/games/92314470246601/Tower-Defense" target="_blank" class="btn btn-primary">
+                            <span data-i18n="hero.playBtn">🎮 Play Demo</span>
+                            <span class="btn-demo-label" data-i18n="hero.demoLabel">Beta Version</span>
+                        </a>
                         <a href="#features" class="btn btn-secondary">
                             <span data-i18n="hero.learnBtn">Learn More</span>
                         </a>
@@ -168,9 +168,23 @@
                         </ul>
                     </div>
                     <div class="gameplay-image">
-                        <div class="gameplay-placeholder">
-                            <span class="placeholder-icon">🎮</span>
-                            <p data-i18n="gameplay.placeholder">Gameplay</p>
+                        <div class="gameplay-slider">
+                            <div class="slider-container">
+                                <img src="src/images/Screen1.png" alt="Gameplay Screenshot 1" class="slider-image active">
+                                <img src="src/images/Screen2.png" alt="Gameplay Screenshot 2" class="slider-image">
+                                <img src="src/images/Screen3.png" alt="Gameplay Screenshot 3" class="slider-image">
+                                <img src="src/images/Screen4.png" alt="Gameplay Screenshot 4" class="slider-image">
+                                <img src="src/images/Screen5.png" alt="Gameplay Screenshot 5" class="slider-image">
+                            </div>
+                            <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                            <button class="slider-btn slider-next" aria-label="Next">›</button>
+                            <div class="slider-dots">
+                                <button class="dot active" data-slide="0"></button>
+                                <button class="dot" data-slide="1"></button>
+                                <button class="dot" data-slide="2"></button>
+                                <button class="dot" data-slide="3"></button>
+                                <button class="dot" data-slide="4"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -257,11 +271,11 @@
             <div class="container">
                 <div class="cta-content">
                     <h2 class="cta-title" data-i18n="cta.title">Ready to Start the Battle?</h2>
-                    <p class="cta-text" data-i18n="cta.text">The game is actively being developed. Stay tuned for updates!</p>
-                    <button class="btn btn-primary btn-large btn-disabled" disabled>
-                        <span data-i18n="cta.button">🎮 Game in Development</span>
-                        <span class="btn-soon-label" data-i18n="cta.soonLabel">Launch Soon</span>
-                    </button>
+                    <p class="cta-text" data-i18n="cta.text">Try the demo version now and experience the gameplay!</p>
+                    <a href="https://www.roblox.com/games/92314470246601/Tower-Defense" target="_blank" class="btn btn-primary btn-large">
+                        <span data-i18n="cta.button">🎮 Play Demo</span>
+                        <span class="btn-demo-label" data-i18n="cta.demoLabel">Beta Version</span>
+                    </a>
                     <div class="cta-socials">
                         <p class="cta-follow" data-i18n="cta.follow">Follow the news:</p>
                         <div class="social-links">
