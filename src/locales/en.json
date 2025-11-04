@@ -142,6 +142,11 @@
         "name": "T1Ran",
         "role": "Builder",
         "description": "Builds worlds and environments inside the game."
+      },
+      "member14": {
+        "name": "@Kto_to_bibi",
+        "role": "Painter",
+        "description": "Paints worlds and brings them to life with color and texture."
       }
     }
   },
