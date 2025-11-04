@@ -95,14 +95,14 @@ function renderActiveCodes() {
                 <div class="code-reward">
                     <div class="reward-icon">${codeData.icon}</div>
                     <div class="reward-text">
-                        <div class="reward-label">Винагорода:</div>
+                        <div class="reward-label">Reward:</div>
                         <div class="reward-value">${codeData.reward}</div>
                     </div>
                 </div>
                 <div class="code-actions">
                     <button class="btn-copy" data-code="${codeData.code}">
                         <span class="icon">📋</span>
-                        <span class="text">Скопіювати</span>
+                        <span class="text">Copy</span>
                     </button>
                 </div>
             </div>
@@ -116,7 +116,7 @@ function renderExpiredCodes() {
     if (!expiredCodesContainer) return;
 
     if (expiredCodes.length === 0) {
-        expiredCodesContainer.innerHTML = '<p style="text-align: center; color: var(--color-text-secondary);">Немає неактивних кодів</p>';
+        expiredCodesContainer.innerHTML = '<p style="text-align: center; color: var(--color-text-secondary);">No expired codes</p>';
         return;
     }
 
@@ -175,7 +175,7 @@ function fallbackCopyToClipboard(text, button) {
 function showSuccessState(button) {
     const originalHTML = button.innerHTML;
     button.classList.add('copied');
-    button.innerHTML = '<span class="icon">✓</span><span class="text">Скопійовано!</span>';
+    button.innerHTML = '<span class="icon">✓</span><span class="text">Copied!</span>';
     
     setTimeout(() => {
         button.classList.remove('copied');
