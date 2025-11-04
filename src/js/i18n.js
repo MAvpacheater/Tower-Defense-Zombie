@@ -2,7 +2,7 @@
 
 class I18n {
     constructor() {
-        this.currentLang = this.getStoredLanguage() || 'uk';
+        this.currentLang = this.getStoredLanguage() || 'en';
         this.translations = {};
         this.init();
     }
