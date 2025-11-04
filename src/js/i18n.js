@@ -16,9 +16,15 @@ class I18n {
     async loadTranslations() {
         const languages = ['uk', 'en', 'ru'];
         
+        // Визначаємо базовий шлях залежно від поточної сторінки
+        const currentPath = window.location.pathname;
+        const basePath = currentPath.includes('/src/res/') 
+            ? '../locales/' 
+            : 'src/locales/';
+        
         for (const lang of languages) {
             try {
-                const response = await fetch(`src/locales/${lang}.json`);
+                const response = await fetch(`${basePath}${lang}.json`);
                 if (!response.ok) {
                     throw new Error(`Failed to load ${lang}.json`);
                 }
