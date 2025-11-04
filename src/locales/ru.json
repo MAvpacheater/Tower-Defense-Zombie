@@ -142,6 +142,11 @@
         "name": "T1Ran",
         "role": "Builder",
         "description": "Билдер. Строит игровые миры и локации."
+      },
+      "member13": {
+        "name": "@Kto_to_bibi",
+        "role": "Painter",
+        "description": "Художник. Рисует миры и наполняет их цветом и текстурой."
       }
     }
   },
