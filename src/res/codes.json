@@ -1,0 +1,59 @@
+{
+  "activeCodes": [
+    {
+      "code": "MrDep",
+      "reward": "100 coins",
+      "icon": "💰",
+      "type": "common"
+    },
+    {
+      "code": "Darth",
+      "reward": "100 coins",
+      "icon": "💰",
+      "type": "common"
+    },
+    {
+      "code": "Never",
+      "reward": "150 coins",
+      "icon": "💎",
+      "type": "rare"
+    },
+    {
+      "code": "Jask_wantse",
+      "reward": "100 coins",
+      "icon": "💰",
+      "type": "common"
+    },
+    {
+      "code": "AdminArbuz",
+      "reward": "200 coins",
+      "icon": "💎",
+      "type": "rare"
+    },
+    {
+      "code": "Zoag",
+      "reward": "350 coins",
+      "icon": "🏆",
+      "type": "epic"
+    },
+    {
+      "code": "T1Ran",
+      "reward": "250 coins",
+      "icon": "💎",
+      "type": "rare"
+    },
+    {
+      "code": "Ferdinand",
+      "reward": "75 coins",
+      "icon": "💰",
+      "type": "common"
+    },
+    {
+      "code": "RELEASE",
+      "reward": "Limited Axe Man",
+      "icon": "🪓",
+      "type": "legendary"
+    }
+  ],
+  "expiredCodes": []
+}
