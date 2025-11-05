@@ -1,0 +1,25 @@
+{
+  "updates": [
+    {
+      "version": "v0.1.0",
+      "title": "Beta Release",
+      "description": "Welcome to the beta version of Apocalypse Tower Defense! This is the first public release of the game.",
+      "date": "November 5, 2025",
+      "type": "major",
+      "changes": {
+        "added": [
+          "15+ unique towers with different abilities",
+          "15+ zombie types with unique behaviors",
+          "Co-op mode for up to 4 players",
+          "5 playable maps",
+          "Basic progression system",
+          "Promo codes system",
+          "Global leaderboard"
+        ],
+        "improved": [],
+        "fixed": [],
+        "removed": []
+      }
+    }
+  ]
+}
