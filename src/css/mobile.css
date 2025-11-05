@@ -1,6 +1,11 @@
 /* ===== MOBILE RESPONSIVE STYLES ===== */
 /* Додавати ПІСЛЯ main.css */
 
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+
 /* ===== TABLETS & MOBILE (до 968px) ===== */
 @media (max-width: 968px) {
     /* --- SPACING OVERRIDES --- */
@@ -22,29 +27,112 @@
 
     /* --- HEADER --- */
     .header-content {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 1rem;
         padding: 0.75rem 0;
+        flex-wrap: wrap;
     }
 
     .logo {
         font-size: 1.125rem;
-        justify-content: center;
         padding: 0.5rem 0;
+        order: 1;
     }
 
     .logo-icon {
         font-size: 1.75rem;
     }
 
+    /* --- MOBILE MENU TOGGLE --- */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+        background: var(--color-bg-tertiary);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        order: 10;
+    }
+
+    .mobile-menu-toggle:hover {
+        background: var(--color-bg-secondary);
+        border-color: var(--color-accent);
+    }
+
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background: var(--color-text-primary);
+        border-radius: 2px;
+        transition: all var(--transition-normal);
+    }
+
+    .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* --- NAVIGATION --- */
     .nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg-secondary);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        order: 11;
+        width: 100%;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link::after {
         display: none;
     }
 
+    .nav-link.active {
+        background: var(--color-bg-tertiary);
+    }
+
     .header-controls {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        order: 2;
     }
 
     .theme-btn,
@@ -438,6 +526,12 @@
     .update-card {
         padding: 1.5rem 1.25rem;
     }
+
+    .mobile-menu-toggle {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+    }
 }
 
 /* ===== TOUCH OPTIMIZATION ===== */
@@ -451,7 +545,8 @@
     .slider-btn,
     .dot,
     .theme-btn,
-    .lang-btn {
+    .lang-btn,
+    .mobile-menu-toggle {
         -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2);
         touch-action: manipulation;
         user-select: none;
