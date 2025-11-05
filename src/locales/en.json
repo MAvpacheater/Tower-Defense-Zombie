@@ -72,7 +72,39 @@
   },
   "maps": {
     "title": "Game Maps",
-    "subtitle": "Explore all available battle locations"
+    "subtitle": "Explore all available battle locations",
+    "empty": {
+      "icon": "🗺️",
+      "text": "No maps available yet"
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "veryHard": "Very Hard"
+    },
+    "locations": {
+      "abandonedCity": {
+        "name": "Abandoned City",
+        "description": "Fight through the ruins of a once-thriving metropolis. Urban warfare at its finest with multiple elevation levels and strategic chokepoints."
+      },
+      "desertOutpost": {
+        "name": "Desert Outpost",
+        "description": "Defend your position in the scorching desert. Open terrain with limited cover requires careful tower placement."
+      },
+      "frozenWasteland": {
+        "name": "Frozen Wasteland",
+        "description": "Survive the harsh winter conditions. Ice and snow slow down zombies but also affect tower performance."
+      },
+      "militaryBase": {
+        "name": "Military Base",
+        "description": "Use the fortified military installation to your advantage. Pre-built defenses and strategic positions."
+      },
+      "undergroundTunnels": {
+        "name": "Underground Tunnels",
+        "description": "Navigate the dark underground maze. Limited visibility and multiple entry points make this map challenging."
+      }
+    }
   },
   "updates": {
     "title": "Game Updates",
