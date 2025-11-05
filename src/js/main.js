@@ -42,8 +42,11 @@ function initDevNotice() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href.length === 1) return;
+            
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             
             if (target) {
                 const headerOffset = 80;
@@ -70,10 +73,10 @@ function initHeaderScroll() {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 100) {
-            header.style.background = 'rgba(10, 14, 26, 0.95)';
+            header.style.background = 'rgba(10, 14, 26, 0.98)';
             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
         } else {
-            header.style.background = 'rgba(10, 14, 26, 0.8)';
+            header.style.background = 'rgba(10, 14, 26, 0.95)';
             header.style.boxShadow = 'none';
         }
         
@@ -85,7 +88,7 @@ function initHeaderScroll() {
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -109,7 +112,7 @@ function initScrollAnimations() {
     
     elementsToAnimate.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
+        el.style.transform = 'translateY(20px)';
         el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
@@ -125,14 +128,12 @@ function initMobileMenu() {
     // Toggle menu
     mobileMenuToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        nav.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
+        const isActive = nav.classList.contains('active');
         
-        // Prevent body scroll when menu is open
-        if (nav.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
+        if (isActive) {
+            closeMenu();
         } else {
-            document.body.style.overflow = '';
+            openMenu();
         }
     });
 
@@ -140,9 +141,7 @@ function initMobileMenu() {
     const navLinks = nav.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         });
     });
 
@@ -151,20 +150,39 @@ function initMobileMenu() {
         if (nav.classList.contains('active') && 
             !nav.contains(e.target) && 
             !mobileMenuToggle.contains(e.target)) {
-            nav.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         }
     });
 
     // Close menu on window resize if going to desktop
+    let resizeTimer;
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 968 && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            document.body.style.overflow = '';
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth > 968 && nav.classList.contains('active')) {
+                closeMenu();
+            }
+        }, 250);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('active')) {
+            closeMenu();
         }
     });
+
+    function openMenu() {
+        nav.classList.add('active');
+        mobileMenuToggle.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        nav.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
 
 // ===== STATS COUNTER ANIMATION =====
@@ -212,12 +230,22 @@ function initParallax() {
     
     if (!hero) return;
     
+    let ticking = false;
+    
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * 0.5;
-        
-        if (scrolled < window.innerHeight) {
-            hero.style.transform = `translateY(${rate}px)`;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+                
+                if (scrolled < window.innerHeight) {
+                    hero.style.transform = `translateY(${rate}px)`;
+                }
+                
+                ticking = false;
+            });
+            
+            ticking = true;
         }
     });
 }
@@ -234,6 +262,7 @@ function initGameplaySlider() {
     
     let currentSlide = 0;
     const totalSlides = images.length;
+    let autoSlideInterval;
 
     function showSlide(index) {
         images.forEach(img => img.classList.remove('active'));
@@ -254,15 +283,40 @@ function initGameplaySlider() {
         showSlide(prev);
     }
 
-    nextBtn?.addEventListener('click', nextSlide);
-    prevBtn?.addEventListener('click', prevSlide);
+    function startAutoSlide() {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => showSlide(index));
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    }
+
+    nextBtn?.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
     });
 
-    // Auto-slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    prevBtn?.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            startAutoSlide();
+        });
+    });
+
+    // Start auto-slide
+    startAutoSlide();
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
 }
 
 // ===== BUTTON RIPPLE EFFECT =====
@@ -316,7 +370,12 @@ document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         document.title = '🧟 Come back to defend!';
     } else {
-        document.title = 'Apocalypse Tower Defense | Roblox Game';
+        const pageTitle = document.querySelector('title')?.textContent;
+        if (pageTitle && !pageTitle.includes('Come back')) {
+            document.title = pageTitle;
+        } else {
+            document.title = 'Apocalypse Tower Defense | Roblox Game';
+        }
     }
 });
 
@@ -325,7 +384,7 @@ function logInitialization() {
     console.log('%c🧟 Apocalypse Tower Defense', 'color: #dc2626; font-size: 20px; font-weight: bold;');
     console.log('%cWebsite loaded successfully!', 'color: #22c55e; font-size: 14px;');
     console.log(`%cTheme: ${window.themeManager?.getCurrentTheme() || 'dark'}`, 'color: #9ca3af;');
-    console.log(`%cLanguage: ${window.i18n?.getCurrentLanguage() || 'uk'}`, 'color: #9ca3af;');
+    console.log(`%cLanguage: ${window.i18n?.getCurrentLanguage() || 'en'}`, 'color: #9ca3af;');
     console.log('%c🎮 Demo version available!', 'color: #22c55e; font-size: 12px;');
 }
 
@@ -388,7 +447,9 @@ if ('performance' in window) {
     window.addEventListener('load', () => {
         setTimeout(() => {
             const perfData = performance.getEntriesByType('navigation')[0];
-            console.log(`%cPage Load Time: ${(perfData.loadEventEnd - perfData.fetchStart).toFixed(2)}ms`, 'color: #3b82f6;');
+            if (perfData) {
+                console.log(`%cPage Load Time: ${(perfData.loadEventEnd - perfData.fetchStart).toFixed(2)}ms`, 'color: #3b82f6;');
+            }
         }, 0);
     });
 }
