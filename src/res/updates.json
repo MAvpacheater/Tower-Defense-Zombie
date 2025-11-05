@@ -2,23 +2,67 @@
   "updates": [
     {
       "version": "v0.1.0",
-      "title": "Beta Release",
-      "description": "Welcome to the beta version of Apocalypse Tower Defense! This is the first public release of the game.",
-      "date": "November 5, 2025",
+      "title": {
+        "en": "Beta Release",
+        "uk": "Бета-реліз",
+        "ru": "Бета-релиз"
+      },
+      "description": {
+        "en": "Welcome to the beta version of Apocalypse Tower Defense! This is the first public release of the game.",
+        "uk": "Ласкаво просимо до бета-версії Apocalypse Tower Defense! Це перший публічний реліз гри.",
+        "ru": "Добро пожаловать в бета-версию Apocalypse Tower Defense! Это первый публичный релиз игры."
+      },
+      "date": {
+        "en": "November 5, 2025",
+        "uk": "5 листопада 2025",
+        "ru": "5 ноября 2025"
+      },
       "type": "major",
       "changes": {
-        "added": [
-          "15+ unique towers with different abilities",
-          "15+ zombie types with unique behaviors",
-          "Co-op mode for up to 4 players",
-          "5 playable maps",
-          "Basic progression system",
-          "Promo codes system",
-          "Global leaderboard"
-        ],
-        "improved": [],
-        "fixed": [],
-        "removed": []
+        "added": {
+          "en": [
+            "15+ unique towers with different abilities",
+            "15+ zombie types with unique behaviors",
+            "Co-op mode for up to 4 players",
+            "5 playable maps",
+            "Basic progression system",
+            "Promo codes system",
+            "Global leaderboard"
+          ],
+          "uk": [
+            "15+ унікальних вежів з різними здібностями",
+            "15+ типів зомбі з унікальною поведінкою",
+            "Кооперативний режим до 4 гравців",
+            "5 ігрових карт",
+            "Базова система прогресії",
+            "Система промо-кодів",
+            "Глобальна таблиця лідерів"
+          ],
+          "ru": [
+            "15+ уникальных башен с разными способностями",
+            "15+ типов зомби с уникальным поведением",
+            "Кооперативный режим до 4 игроков",
+            "5 игровых карт",
+            "Базовая система прогрессии",
+            "Система промо-кодов",
+            "Глобальная таблица лидеров"
+          ]
+        },
+        "improved": {
+          "en": [],
+          "uk": [],
+          "ru": []
+        },
+        "fixed": {
+          "en": [],
+          "uk": [],
+          "ru": []
+        },
+        "removed": {
+          "en": [],
+          "uk": [],
+          "ru": []
+        }
       }
     }
   ]
