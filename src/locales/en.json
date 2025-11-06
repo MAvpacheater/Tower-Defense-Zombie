@@ -54,8 +54,8 @@
       "text": "Compete for first place in the global leaderboard"
     },
     "missions": {
-      "title": "???????",
-      "text": "???????????????????"
+      "title": "Admin Abuse",
+      "text": "Every sunday at 2.30pm "
     }
   },
   "gameplay": {
@@ -67,6 +67,7 @@
       "item2": "✓ Different difficulty modes",
       "item3": "✓ Progression and upgrade system",
       "item4": "✓ Regular content updates"
+      "item4": "✓ Regular Admin abuse"
     },
     "placeholder": "Gameplay"
   },
