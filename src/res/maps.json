@@ -27,13 +27,6 @@
       "descriptionKey": "maps.locations.militaryBase.description",
       "image": "../images/map4.jpg",
       "difficulty": "medium"
-    },
-    {
-      "id": 5,
-      "nameKey": "maps.locations.undergroundTunnels.name",
-      "descriptionKey": "maps.locations.undergroundTunnels.description",
-      "image": "../images/map5.jpg",
-      "difficulty": "veryHard"
     }
   ]
 }
